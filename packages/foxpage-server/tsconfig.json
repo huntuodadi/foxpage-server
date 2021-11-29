@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "strictPropertyInitialization": false,
+    "types": ["node"],
+    "paths": {}
+  },
+  "include": [
+    "src/**/*",
+    "config/**/*",
+    "app.ts",
+    "app.config.ts",
+    "install.ts",
+    "scripts/*.ts",
+    "static/**/*",
+    "commitlint.config.js",
+    "foxpage.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", "test"]
+}

@@ -102,3 +102,21 @@ dist
 
 # TernJS port file
 .tern-port
+
+package-lock.json
+/dist
+/.npmrc
+/lerna-log.json
+/yarn-error.json
+/yarn.lock
+/packages/foxpage-server/node_modules
+/packages/foxpage-server/dist
+/packages/foxpage-server/nodemon.json
+/packages/foxpage-server/src/controllers/mock.ts
+/packages/foxpage-server/src/third-parties/login/trip-login.ts
+/packages/foxpage-server.npmrc
+/packages/foxpage-server-provider-aws-s3/lib/downloads
+/packages/foxpage-server-provider-aws-s3/lib/zips
+/packages/foxpage-server-provider-aws-s3/src/test.ts
+/packages/foxpage-server-provider-aws-s3/package-lock.json
+/packages/foxpage-server-provider-aws-s3/node_modules

@@ -1,0 +1,50 @@
+module.exports = {
+  env: {
+    node: true,
+  },
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'import'],
+  extends: [
+    // "eslint:recommended",
+    'prettier/@typescript-eslint',
+    // 'plugin:prettier/recommended',
+    // "plugin:@typescript-eslint/eslint-recommended",
+    // 'plugin:@typescript-eslint/recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      modules: true,
+    },
+    project: './tsconfig.json',
+  },
+  rules: {
+    eqeqeq: [
+      'error',
+      'always',
+      {
+        null: 'ignore',
+      },
+    ],
+    semi: ['error', 'always'],
+    'no-var': 0,
+    'comma-spacing': 0,
+    camelcase: 2,
+    'comma-style': [2, 'last'],
+    quotes: [1, 'single'],
+    'no-unreachable': 2,
+    'array-bracket-spacing': [2, 'never'],
+    'brace-style': [2, '1tbs', { allowSingleLine: true }],
+    'no-mixed-spaces-and-tabs': 2,
+    'no-ternary': 0,
+    'prefer-const': 0,
+    'no-multi-spaces': 1,
+    'max-len': [0, 100, 2],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+  },
+};

@@ -1,0 +1,19 @@
+{
+  "docs": "https://github.com/lerna/lerna#lernajson",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": ["packages/*"],
+  "command": {
+    "bootstrap": {
+      "hoist": false
+    },
+    "version": {
+      "conventionalCommits": true
+    },
+    "publish": {
+      "message": "chore(release): publish"
+    }
+  },
+  "ignoreChanges": ["**/*.md"],
+  "version": "independent"
+}

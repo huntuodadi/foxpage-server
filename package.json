@@ -1,0 +1,60 @@
+{
+  "name": "foxpage-server",
+  "version":"0.0.2",
+  "private": "true",
+  "workspaces": [
+    "packages/foxpage-server",
+    "packages/foxpage-server-types",
+    "packages/foxpage-server-provider-aws-s3"
+  ],
+  "scripts": {
+    "start": "npm run build:prod && cd packages/foxpage-server && cross-env NODE_ENV=development node dist/app.js",
+    "start:pm2": "",
+    "dev": "cd packages/foxpage-server && cross-env NODE_ENV=debug \"ts-node\" app.ts",
+    "test": "",
+    "build:prod": "cd packages/foxpage-server && cross-env NODE_ENV=production npm run build:prod",
+    "boot": "yarn && lerna bootstrap",
+    "commit": "git-cz",
+    "lint": "eslint --cache --cache-location=.cache/eslint --ext .ts,.tsx --report-unused-disable-directives packages/",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^12.1.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "git-cz": "^4.7.6",
+    "husky": "^6.0.0",
+    "import": "0.0.6",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^9.3.0",
+    "typescript": "4.4.4"
+  },
+  "devDependencies": {
+    "ts-node": "^8.8.1"
+  }
+}
